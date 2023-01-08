@@ -1,0 +1,44 @@
+.patient-information {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.record-title {
+  font-size: 17px;
+  position: absolute;
+  top: -14px;
+  margin-left: 16px;
+  padding: 1px 8px;
+  color: #777;
+  background: #fff;
+  border-radius: 2px 2px 0 0;
+  transition: background-color 0.4s;
+}
+.record-information {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  padding: 16px 24px;
+  background-color: #fff;
+}
+
+.prescription-information {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  padding: 16px 24px;
+  background-color: #fff;
+}
