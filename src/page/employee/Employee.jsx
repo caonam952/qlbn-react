@@ -433,6 +433,23 @@ export const Employee = () => {
             <Input />
           </Form.Item>
 
+          <Form.Item
+            label="Trạng thái"
+            name="conditionStatus"
+            // hasFeedback
+            rules={[{ required: true, message: "Vui lòng chọn trạng thái" }]}
+          >
+            <Select
+              placeholder="Trạng thái"
+              allowClear
+              value={selected}
+              onChange={(e) => setSelected(e)}
+            >
+              <Option value="Đang làm">Đang làm</Option>
+              <Option value="Đã nghỉ">Đã nghỉ</Option>
+            </Select>
+          </Form.Item>
+
           <Form.Item wrapperCol={{ offset: 11, span: 20 }}>
             <Button type="primary" htmlType="submit">
               Lưu

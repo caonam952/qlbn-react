@@ -30,7 +30,7 @@ const MyLayout = () => {
     <Layout>
       <Header
         className="header"
-        style={{ position: "sticky", top: 0, zIndex: 10, height:"60px"}}
+        style={{ position: "sticky", top: 0, zIndex: 10, height: "60px" }}
       >
         <Row>
           <Col
@@ -40,8 +40,20 @@ const MyLayout = () => {
             // style={{ background: "#001529", color: "#FFFFFF"}}
           >
             <Link to="/">
-              <h1 style={{ color: "white" }}>VH CLINIC</h1>
-              {/* <img src="../../asset/icon/patient.png"/> */}
+              {/* <h1 style={{ color: "white" }}>VH CLINIC</h1> */}
+              <div
+                style={{
+                  height: "60px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                <img
+                  src="././logo.png"
+                  style={{ height: "100%", padding: "10px 0" }}
+                />
+              </div>
             </Link>
           </Col>
           <Col span={8} style={{ textAlign: "end", paddingRight: "10px" }}>

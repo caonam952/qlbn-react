@@ -150,14 +150,14 @@ export const Record = () => {
             </Descriptions.Item>
           </Descriptions>
 
-          <Descriptions column={2}>
+          {/* <Descriptions column={2}>
             <Descriptions.Item label="Ảnh Trước Khám">
               {record?.preImage}
             </Descriptions.Item>
             <Descriptions.Item label="Ảnh Sau Khám">
               {record?.afterImage}
             </Descriptions.Item>
-          </Descriptions>
+          </Descriptions> */}
         </section>
 
         <section class="prescription-information">
@@ -215,13 +215,13 @@ export const Record = () => {
               <TextArea rows={2} />
             </Form.Item>
 
-            <Form.Item label="Ảnh trước khám" name="preImage">
+            {/* <Form.Item label="Ảnh trước khám" name="preImage">
               <Input placeholder="Nhập link drive" />
             </Form.Item>
 
             <Form.Item label="Ảnh sau khám" name="afterImage">
               <Input placeholder="Nhập link drive" />
-            </Form.Item>
+            </Form.Item> */}
 
             <Form.Item wrapperCol={{ offset: 11, span: 20 }}>
               <Button type="primary" htmlType="submit">

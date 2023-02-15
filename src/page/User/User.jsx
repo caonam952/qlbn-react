@@ -330,7 +330,7 @@ export const User = () => {
             >
               <Option value="admin">ROLE_ADMIN</Option>
               <Option value="mod">ROLE_MODERATOR</Option>
-              <Option value="user">ROLE_USER</Option>
+              {/* <Option value="user">ROLE_USER</Option> */}
             </Select>
           </Form.Item>
 

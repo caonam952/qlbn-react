@@ -185,6 +185,7 @@ export const Prescriptions = ({ activekey = "" }) => {
       // prescriptionDate: null,
       appointmentDate: null,
       employeeDto: null,
+      note: null,
     });
   };
 
@@ -230,7 +231,7 @@ export const Prescriptions = ({ activekey = "" }) => {
           <Form.Item
             label="Ngày khám"
             name="prescriptionDate"
-            rules={[{ required: true, message: "Chưa nhập địa chỉ" }]}
+            rules={[{ required: true, message: "Chưa nhập ngày khám" }]}
             style={{ marginBottom: "30px" }}
           >
             <DatePicker
@@ -245,7 +246,7 @@ export const Prescriptions = ({ activekey = "" }) => {
           <Form.Item
             label="Ngày tái khám"
             name="appointmentDate"
-            rules={[{ required: true, message: "Chưa nhập địa chỉ" }]}
+            rules={[{ required: true, message: "Chưa nhập ngày tái khám" }]}
             style={{ marginBottom: "30px" }}
           >
             <DatePicker format={dateFormat} />

@@ -180,7 +180,7 @@ export const PrescriptionDetail = ({ prescriptionId }) => {
       </Spin>
 
       <Modal
-        title="Thêm Đơn Thuốc"
+        title="Thêm Thuốc"
         centered
         visible={isOpenAdd}
         footer={null}
