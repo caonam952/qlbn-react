@@ -40,8 +40,8 @@ export const PrescriptionDetail = ({ prescriptionId }) => {
   const [form] = Form.useForm();
 
   const [spin, setSpin] = useState(false);
-  console.log("2. =>>>>", prescriptionId);
-  console.log("3. ===p", prescriptionDetails);
+  // console.log("2. =>>>>", prescriptionId);
+  // console.log("3. ===p", prescriptionDetails);
 
   useEffect(() => {
     setSpin(true);

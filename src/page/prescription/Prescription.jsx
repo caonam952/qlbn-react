@@ -1,6 +1,7 @@
 import { Descriptions } from "antd";
 
 export const Prescription = ({ data }) => {
+  console.log(data);
   return (
     <>
       <section>
@@ -17,13 +18,10 @@ export const Prescription = ({ data }) => {
           </Descriptions.Item>
 
           <Descriptions.Item label="Bác sĩ khám">
-            {data?.employeeDto?.name}
+            {data?.attendingDoctor}
           </Descriptions.Item>
 
-          <Descriptions.Item label="Ghi chú">
-            {data?.note}
-          </Descriptions.Item>
-
+          <Descriptions.Item label="Ghi chú">{data?.note}</Descriptions.Item>
         </Descriptions>
       </section>
     </>

@@ -29,7 +29,6 @@ export const Employee = () => {
     onDelete,
     onAddEmployee,
     onUpdateEmployee,
-    detailEmployee,
   } = useContext(EmployeeContext);
   const navigate = useNavigate();
   const [isOpenAdd, setIsOpenAdd] = useState(false);

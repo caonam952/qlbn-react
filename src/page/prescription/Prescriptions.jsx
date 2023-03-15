@@ -63,7 +63,7 @@ export const Prescriptions = ({ activekey = "" }) => {
 
   const [loading, setLoading] = useState(true);
 
-  console.log("1. Key ===>", activeKey);
+  // console.log("1. Key ===>", activeKey);
 
   useEffect(() => {
     setLoading(true);
@@ -171,7 +171,7 @@ export const Prescriptions = ({ activekey = "" }) => {
 
   const onAddFinish = async (values) => {
     console.log(values);
-    const tempValue = { ...values, patientDto: patient?.id };
+    const tempValue = { ...values,attendingDoctor: user?.name, patientDto: patient?.id };
     console.log(tempValue);
     await onAddPrescription(tempValue).then((res) => {
       getPrescriptionsByPatientId(params.id);
@@ -184,7 +184,7 @@ export const Prescriptions = ({ activekey = "" }) => {
     form.setFieldsValue({
       // prescriptionDate: null,
       appointmentDate: null,
-      employeeDto: null,
+      // employeeDto: null,
       note: null,
     });
   };
@@ -254,23 +254,35 @@ export const Prescriptions = ({ activekey = "" }) => {
 
           <Form.Item
             label="Bác sĩ phụ trách"
-            name="employeeDto"
-            rules={[{ required: true, message: "Chưa chọn bác sĩ phụ trách" }]}
+            name="attendingDoctor"
+            // name="employeeDto"
+            // rules={[{ required: true, message: "Chưa chọn bác sĩ phụ trách" }]}
             style={{ marginBottom: "30px" }}
           >
-            <Select
+            {/* <Select
               onChange={handleChange}
               style={{
                 width: 200,
               }}
-              // disabled
+              disabled
             >
               {employees.map((item, index) => (
                 <Select.Option value={item?.id} key={item?.id}>
                   {item?.name}
                 </Select.Option>
               ))}
-            </Select>
+            </Select> */}
+            {/* <Select
+              defaultValue={user?.name}
+              onChange={handleChange}
+              disabled
+            >
+            </Select> */}
+            <Input
+            value={user?.name}
+            defaultValue={user?.name}
+            disabled
+            />
           </Form.Item>
 
           <Form.Item label="Ghi Chú" name="note">

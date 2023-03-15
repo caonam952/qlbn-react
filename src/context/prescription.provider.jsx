@@ -34,7 +34,7 @@ const PrescriptionProvider = ({ children }) => {
       setPrescriptions("");
       axios(config)
         .then(function (response) {
-          console.log(JSON.stringify(response.data));
+          // console.log(JSON.stringify(response.data));
           setPrescriptions(response.data);
           res(response);
         })
@@ -50,13 +50,14 @@ const PrescriptionProvider = ({ children }) => {
     var data = JSON.stringify({
       prescriptionDate: moment(data.prescriptionDate).format("DD/MM/YYYY"),
       appointmentDate: moment(data.appointmentDate).format("DD/MM/YYYY"),
+      attendingDoctor: data.attendingDoctor,
       note: data.note,
       patientDto: {
         id: data?.patientDto,
       },
-      employeeDto: {
-        id: data?.employeeDto,
-      },
+      // employeeDto: {
+      //   id: data?.employeeDto,
+      // },
     });
 
     var config = {
@@ -128,7 +129,7 @@ const PrescriptionProvider = ({ children }) => {
           rej(error);
         });
     });
-  }
+  };
 
   const value = {
     prescriptions,
@@ -136,7 +137,7 @@ const PrescriptionProvider = ({ children }) => {
     getPrescriptionsByPatientId,
     onAddPrescription,
     onDeletePrescription,
-    findPrescriptionById
+    findPrescriptionById,
   };
 
   return (

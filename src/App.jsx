@@ -11,6 +11,7 @@ import Unauthorize from "./page/notification/Unauthorize";
 import { User } from "./page/User/User";
 import { Record } from "./page/record/Record";
 import { PrintPrescription } from "./page/print/PrintPrescription";
+import { Statistics } from "./page/statistics/Statistics";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/dang-nhap" element={<Login />} />
 
           <Route path="/" element={<MyLayout />}>
+            <Route path="/moderator/" element={<Statistics />} />
+
             <Route path="/moderator/patient" element={<Patient />} />
 
             <Route path="/moderator/medicine" element={<Medicine />} />

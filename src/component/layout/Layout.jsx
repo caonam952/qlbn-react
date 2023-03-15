@@ -3,7 +3,7 @@ import {
   UserOutlined,
   LogoutOutlined,
   FolderOpenOutlined,
-  SnippetsOutlined,
+  BarChartOutlined,
   MedicineBoxOutlined,
   BookOutlined,
 } from "@ant-design/icons";
@@ -46,7 +46,7 @@ const MyLayout = () => {
                   height: "60px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <img
@@ -77,25 +77,31 @@ const MyLayout = () => {
         >
           <Menu theme="dark" mode="inline">
             {user?.roles?.includes("ROLE_MODERATOR") ? (
+              <Menu.Item key="nav0" icon={<BarChartOutlined />}>
+                <Link to="/moderator/">Thống kê</Link>
+              </Menu.Item>
+            ) : null}
+
+            {user?.roles?.includes("ROLE_MODERATOR") ? (
               <Menu.Item key="nav1" icon={<TeamOutlined />}>
                 <Link to="/moderator/patient">Bệnh Nhân</Link>
               </Menu.Item>
             ) : null}
 
             {user?.roles?.includes("ROLE_MODERATOR") ? (
-              <Menu.Item key="nav5" icon={<MedicineBoxOutlined />}>
+              <Menu.Item key="nav2" icon={<MedicineBoxOutlined />}>
                 <Link to="/moderator/medicine">Thuốc</Link>
               </Menu.Item>
             ) : null}
 
             {user?.roles?.includes("ROLE_ADMIN") ? (
-              <Menu.Item key="nav2" icon={<UserOutlined />}>
+              <Menu.Item key="nav3" icon={<UserOutlined />}>
                 <Link to="/admin/employee">Nhân Viên</Link>
               </Menu.Item>
             ) : null}
 
             {user?.roles?.includes("ROLE_ADMIN") ? (
-              <Menu.Item key="nav6" icon={<BookOutlined />}>
+              <Menu.Item key="nav4" icon={<BookOutlined />}>
                 <Link to="/admin/user">Quản lý người dùng</Link>
               </Menu.Item>
             ) : null}
